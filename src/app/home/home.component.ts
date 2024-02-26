@@ -9,7 +9,7 @@ import { Circle } from '../shared/canvas models/circle.canvas';
 	styleUrl: './home.component.scss',
 })
 export class HomeComponent implements OnInit {
-	path: string = '/assets';
+	path: string = '/Portfolio/assets';
 	@ViewChild('myCanvas') canvas!: ElementRef<HTMLCanvasElement>;
 	context!: CanvasRenderingContext2D | null;
 	
