@@ -9,14 +9,13 @@ import { Circle } from '../shared/canvas models/circle.canvas';
 	styleUrl: './home.component.scss',
 })
 export class HomeComponent implements OnInit {
-	// its important myCanvas matches the variable name in the template
+	path: string = '/assets';
 	@ViewChild('myCanvas') canvas!: ElementRef<HTMLCanvasElement>;
-
 	context!: CanvasRenderingContext2D | null;
 	
 	circles: Circle[] = [];
 	length = 100;
-	width = innerWidth - 15;
+	width = innerWidth - 16;
 	height = innerHeight;
 	mouse: any = {
 		x: undefined,
@@ -24,10 +23,49 @@ export class HomeComponent implements OnInit {
 	};
 
 	ngOnInit() {
+		this.initCircles();
+	}
+
+	ngAfterViewInit(): void {
+		this.canvas.nativeElement.width = this.width;
+		this.canvas.nativeElement.height = this.height;
+		this.context = this.canvas.nativeElement.getContext('2d');
+		this.mouse.x = this.width/2
+		this.mouse.y = this.height/2
+
+		window.addEventListener('resize', (e: any) => {
+			this.canvas.nativeElement.width = e.currentTarget.innerWidth - 16;
+			this.canvas.nativeElement.height = e.currentTarget.innerHeight - 16;
+
+			if(this.context !== null) {
+				this.context.fillStyle = 'rgba(0,0,0,0.1)';
+			}
+
+			if (e.currentTarget.innerWidth  < 768) {
+				this.length = 100;
+			} else if (e.currentTarget.innerWidth < 1280) {
+				this.length = 300;
+			} else {
+				this.length = 500;
+			}
+
+			this.initCircles();
+		});
+
+		// window.addEventListener('mousemove', e => {
+		// 	this.mouse.x = e.x;
+		// 	this.mouse.y = e.y;
+		// });
+
+		this.animate();
+	}
+
+	private initCircles() {
+		this.circles = [];
 		for (let i = 0; i < this.length; i++) {
-			const radius = 2;
-			let x = this.randomIntFromRange(radius, this.width);
-			let y = this.randomIntFromRange(radius, this.height);
+			const radius = 1;
+			let x = this.randomIntFromRange(radius, innerWidth);
+			let y = this.randomIntFromRange(radius, innerHeight);
 			let check = true;
 			while (check === true) {
 				check = false;
@@ -39,35 +77,14 @@ export class HomeComponent implements OnInit {
 						continue;
 					}
 
-					x = this.randomIntFromRange(radius, this.width);
-					y = this.randomIntFromRange(radius, this.height);
+					x = this.randomIntFromRange(radius, innerWidth);
+					y = this.randomIntFromRange(radius, innerHeight);
 					check = true;
 				}
 			}
-
 			let c1 = new Circle(x, y, radius);
 			this.circles.push(c1);
 		}
-	}
-
-	ngAfterViewInit(): void {
-		this.canvas.nativeElement.width = this.width;
-		this.canvas.nativeElement.height = this.height;
-		this.context = this.canvas.nativeElement.getContext('2d');
-		this.mouse.x = this.width/2
-		this.mouse.y = this.height/2
-
-		window.addEventListener('resize', (e: any) => {
-			this.canvas.nativeElement.width = e.currentTarget.innerWidth - 15;
-			this.canvas.nativeElement.height = e.currentTarget.innerHeight - 15;
-		});
-
-		// window.addEventListener('mousemove', e => {
-		// 	this.mouse.x = e.x;
-		// 	this.mouse.y = e.y;
-		// });
-
-		this.animate();
 	}
 
 	randomIntFromRange(min: number, max: number) {
