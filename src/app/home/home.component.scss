@@ -1,0 +1,60 @@
+canvas {
+	overflow: hidden;
+}
+
+.intro .information {
+	@apply w-full flex justify-center items-center flex-col gap-10;
+
+	color: white;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	// background-color: red;
+	img {
+		width: 100px;
+		height: 100px;
+		border-radius: 100%;
+	}
+
+	.desctiption {
+		@apply text-center;
+
+		.name {
+			font-size: 4rem;
+		}
+
+		.works {
+			font-size: 1.2rem;
+		}
+	}
+
+	.social {
+		@apply flex items-center justify-center gap-4;
+
+		a img {
+			width: 30px;
+		}
+	}
+}
+
+.about {
+	@apply mt-14;
+
+	#title {
+		font-size: 2rem;
+	}
+
+	p {
+		font-size: 1.5rem;
+		font-weight: 300;
+	}
+}
+
+.my-projects {
+
+
+
+
+	
+	
+}
