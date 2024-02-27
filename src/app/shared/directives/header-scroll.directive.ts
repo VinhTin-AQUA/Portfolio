@@ -19,6 +19,4 @@ export class HeaderScrollDirective {
       this.renderer.removeClass(element, 'active');
     }
   }
-
-
 }

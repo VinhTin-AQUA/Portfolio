@@ -15,6 +15,19 @@ header {
 	@apply p-5 fixed top-0 left-0 w-full flex-col items-start justify-between flex md:hidden;
 	background-color: transparent;
 	// position: relative;
+
+	.show-btn {
+		@apply flex items-center justify-normal gap-2;
+	}
+}
+
+.show-btn-scroll {
+	.show-btn button img {
+		filter: brightness(0) saturate(100%) invert(100%) sepia(19%) saturate(566%)
+			hue-rotate(175deg) brightness(100%) contrast(98%);
+	}
+
+	background-color: black;
 }
 
 .menu-collapse {
@@ -34,7 +47,6 @@ header {
 
 .show-menu-collapse {
 	left: 5px;
-	
 }
 
 .active {

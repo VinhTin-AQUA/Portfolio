@@ -56,6 +56,8 @@ export class HomeComponent implements OnInit {
 				image: this.path + '/project-images/chat-app.png',
 			},
 		];
+		console.log(this.projects);
+		
 	}
 
 	ngAfterViewInit(): void {
