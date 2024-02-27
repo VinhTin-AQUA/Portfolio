@@ -5,8 +5,40 @@
 		</div>
 
 		<ul class="menu">
-			<li class="menu-item">Home</li>
-			<li class="menu-item">CV</li>
+			<li class="menu-item"><a href="#">Home</a></li>
+			<li class="menu-item">
+				<a href="https://www.topcv.vn/xem-cv/WwAEB1FRBlIFBQ5cVlVXCwZQCldUUAlcBFtRUgb29e"
+					>CV</a
+				>
+			</li>
 		</ul>
+	</div>
+
+	<div class="header-collapse">
+		<div class="text-white">
+			<button (click)="showMenu()">
+				<img width="20" src="{{ path }}/icons/bars-solid.svg" alt="" />
+			</button>
+		</div>
+
+		<div
+			class="menu-collapse"
+			[ngClass]="{
+				'hide-menu-collapse': isShowedMenu === false,
+				'show-menu-collapse': isShowedMenu === true
+			}"
+		>
+			<div class="btn"><button (click)="showMenu()">X</button></div>
+			<div class="name">Ho Vinh Tin</div>
+
+			<ul class="menu">
+				<li class="menu-item"><a href="#">Home</a></li>
+				<li class="menu-item">
+					<a href="https://www.topcv.vn/xem-cv/WwAEB1FRBlIFBQ5cVlVXCwZQCldUUAlcBFtRUgb29e"
+						>CV</a
+					>
+				</li>
+			</ul>
+		</div>
 	</div>
 </header>

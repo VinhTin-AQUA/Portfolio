@@ -25,7 +25,7 @@ export class FooterComponent {
 
 	ngOnInit() {
 		for (let i = 0; i < this.length; i++) {
-			const radius = 2;
+			const radius = 1;
 			let x = this.randomIntFromRange(radius, this.width);
 			let y = this.randomIntFromRange(radius, this.height);
 			let check = true;
@@ -51,14 +51,19 @@ export class FooterComponent {
 	}
 
 	ngAfterViewInit(): void {
-		this.canvas.nativeElement.width = this.width;
-		this.canvas.nativeElement.height = 210;
+		// this.canvas.nativeElement.width = this.width;
+		// this.canvas.nativeElement.height = 210;
+
+		this.canvas.nativeElement.width = this.canvas.nativeElement.offsetWidth;
+		this.canvas.nativeElement.height = this.canvas.nativeElement.offsetHeight;
+
+
 		this.context = this.canvas.nativeElement.getContext('2d');
 		this.mouse.x = this.width / 2;
 		this.mouse.y = this.height / 2;
 
 		window.addEventListener('resize', (e: any) => {
-			this.canvas.nativeElement.width = e.currentTarget.innerWidth - 16;
+			// this.canvas.nativeElement.width = e.currentTarget.innerWidth - 16;
 			// this.canvas.nativeElement.height = e.currentTarget.innerHeight - 15;
 		});
 
