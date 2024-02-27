@@ -12,7 +12,7 @@ import { HeaderCollapseScrollDirective } from '../../shared/directives/header-co
 })
 export class HeaderComponent {
 
-  path: string = '/assets'
+  path: string = '/Portfolio/assets'
 
   isShowedMenu: boolean = false;
 

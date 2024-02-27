@@ -32,28 +32,28 @@ export class HomeComponent implements OnInit {
 				type: 'Asp Net Core MVC',
 				description: '',
 				link: 'https://github.com/VinhTin-AQUA/Booking_Du_lich_HocKy5',
-				image: this.path + '/project-images/booking.png',
+				image: '/Portfolio/assets/project-images/booking.png',
 			},
 			{
 				name: 'Reminder App',
 				type: 'WPF',
 				description: '',
 				link: 'https://github.com/VinhTin-AQUA/Reminder-App',
-				image: this.path + '/project-images/reminder-app.png',
+				image: '/Portfolio/assets/project-images/reminder-app.png',
 			},
 			{
 				name: 'UTC2 Student Desktop',
 				type: 'WPF',
 				description: '',
 				link: 'https://github.com/VinhTin-AQUA/UTC2-Student-Desktop',
-				image: this.path + '/project-images/student-desktop.png',
+				image: '/Portfolio/assets/project-images/student-desktop.png',
 			},
 			{
 				name: 'Chat App',
 				type: 'Asp Net API',
 				description: '',
 				link: 'https://github.com/VinhTin-AQUA/Chat-App',
-				image: this.path + '/project-images/chat-app.png',
+				image: '/Portfolio/assets/project-images/chat-app.png',
 			},
 		];
 		console.log(this.projects);
