@@ -11,7 +11,7 @@ import { CommonModule } from '@angular/common';
 })
 export class HeaderComponent {
 
-  path: string = '/assets'
+  path: string = '/Portfolio/assets'
 
   isShowedMenu: boolean = false;
 
