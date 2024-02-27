@@ -1,7 +1,6 @@
 header {
 	font-size: 1.3rem;
 	@apply text-black md:text-white;
-
 	z-index: 2;
 	position: relative;
 }
@@ -14,8 +13,6 @@ header {
 .header-collapse {
 	@apply p-5 fixed top-0 left-0 w-full flex-col items-start justify-between flex md:hidden;
 	background-color: transparent;
-	// position: relative;
-
 	.show-btn {
 		@apply flex items-center justify-normal gap-2;
 	}
@@ -26,7 +23,6 @@ header {
 		filter: brightness(0) saturate(100%) invert(100%) sepia(19%) saturate(566%)
 			hue-rotate(175deg) brightness(100%) contrast(98%);
 	}
-
 	background-color: black;
 }
 
@@ -34,8 +30,6 @@ header {
 	@apply bg-[#f8fafc] p-2 rounded-md;
 	transition: 300ms;
 	position: absolute;
-	// top: -30px;
-
 	.btn button {
 		@apply w-full text-left p-2;
 	}
@@ -61,15 +55,12 @@ header {
 
 .menu {
 	@apply flex flex-col md:flex-row items-start md:items-center justify-start md:gap-5;
-
 	.menu-item {
 		@apply select-none cursor-pointer w-full md:w-auto p-2 md:p-0 rounded-md;
 		transition: 100ms;
-
 		&:hover {
 			@apply bg-[#e2e8f0] md:bg-transparent;
 		}
-
 		text-transform: uppercase;
 	}
 }
