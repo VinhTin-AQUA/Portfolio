@@ -19,6 +19,7 @@
 }
 
 .wrapper {
+	@apply select-none;
 	padding: 10px;
 }
 
@@ -93,6 +94,12 @@
 	.nav-btn-mobile {
 		@apply mr-5 duration-150 hover:text-[var(--color-green)] hover:font-bold;
 	}
+}
+
+// content-web
+.content-web {
+	@apply md:min-h-[90dvh] hidden md:block col-span-12 md:col-span-7 overflow-hidden rounded-md;
+	@apply bg-[var(--bg-light)] dark:bg-[var(--bg-dark)] dark:text-[var(--text-dark)];
 }
 
 // profile
