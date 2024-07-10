@@ -1,1 +1,52 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+:root {
+  /* dark */ 
+  --bg-dark: #0f172a;
+  --text-dark: #ffffff;
+
+  /* light */ 
+  --bg-light: white;
+  --text-light: #0f172a;
+
+  /* active */
+  --bg-light-active: #1d4ed8;
+  --text-light-active: white;
+  --bg-dark-active: white;
+  --text-dark-active: #0f172a;
+
+  /* hover */ 
+  --bg-light-hover: #60a5fa;
+  --text-light-hover: white;
+  --bg-dark-hover: #f1f5f9;
+  --text-dark-hover: #0f172a;
+
+  /* special */
+  --color-green: #15803d;
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  margin: 0 auto;
+  font-family: "IBM Plex Mono", monospace;
+}

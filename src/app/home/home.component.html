@@ -1,0 +1,451 @@
+<div class="gradient wrapper">
+	<div class="container mx-auto">
+		<div class="grid grid-cols-12 gap-2">
+			<!-- menu -->
+			<div class="col-span-12 md:col-span-1">
+				<!-- web -->
+				<div class="nav">
+					<div id="nav-setting" class="">
+						<div (click)="onChangeTheme()" class="nav-btn-wrap-setting">
+							@if(themeService.darkMode() === 'dark') {
+							<button class="nav-btn-setting">
+								<i class="fa-regular fa-moon"></i>
+							</button>
+							} @else {
+							<button class="nav-btn-setting">
+								<i class="fa-regular fa-sun"></i>
+							</button>
+							}
+						</div>
+
+						<!-- <div class="nav-btn-wrap-setting">
+							<button class="nav-btn-setting">
+								<i class="fa-regular fa-moon"></i>
+							</button>
+						</div> -->
+					</div>
+
+					<div id="nav-bar" class="">
+						<a
+							routerLink="/about"
+							routerLinkActive="menu-active"
+							[routerLinkActiveOptions]="{ exact: true }"
+							class="nav-item"
+						>
+							<span class="nav-btn-icon">
+								<i class="fa-regular fa-user"></i><br />
+							</span>
+							<span class="text-sm">About</span>
+						</a>
+
+						<a
+							routerLink="/projects"
+							class="nav-item"
+							routerLinkActive="menu-active"
+							[routerLinkActiveOptions]="{ exact: true }"
+						>
+							<span class="nav-btn-icon">
+								<i class="fa-regular fa-folder"></i>
+							</span>
+							<span class="text-sm">Projects</span>
+						</a>
+
+						<a
+							routerLink="/experience"
+							class="nav-item"
+							routerLinkActive="menu-active"
+							[routerLinkActiveOptions]="{ exact: true }"
+						>
+							<span class="nav-btn-icon">
+								<i class="fa-regular fa-star"></i>
+							</span>
+							<span class="text-sm">Exp</span>
+						</a>
+
+						<a
+							routerLink="/skills"
+							class="nav-item"
+							routerLinkActive="menu-active"
+							[routerLinkActiveOptions]="{ exact: true }"
+						>
+							<span class="nav-btn-icon">
+								<i class="fa-regular fa-sun"></i>
+							</span>
+							<span class="text-sm">Skills</span>
+						</a>
+					</div>
+				</div>
+
+				<!-- mobile -->
+				<div id="nav-mobile" class="">
+					<div class="flex flex-wrap justify-between items-center pt-3 align">
+						<div></div>
+						<span class="font-bold text-xl">Ho Vinh Tin</span>
+
+						<div (click)="onChangeTheme()">
+							@if(themeService.darkMode() === 'dark') {
+							<button class="btn-change-mode">
+								<i class="fa-regular fa-moon"></i>
+							</button>
+							} @else {
+							<button class="btn-change-mode">
+								<i class="fa-regular fa-moon"></i>
+							</button>
+							}
+						</div>
+					</div>
+
+					<div
+						class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center"
+					>
+						<nav
+							class="md:ml-auto flex flex-wrap items-center text-base justify-center"
+						>
+							<button
+								(click)="scrollToAbout('about_1')"
+								class=" nav-btn-mobile"
+							>
+								About
+							</button>
+							<button
+								(click)="scrollToAbout('projects_1')"
+								class=" nav-btn-mobile"
+							>
+								Projects
+							</button>
+							<button
+								(click)="scrollToAbout('experience_1')"
+								class=" nav-btn-mobile"
+							>
+								Experience
+							</button>
+							<button
+								(click)="scrollToAbout('skills_1')"
+								class=" nav-btn-mobile"
+							>
+								Skills
+							</button>
+						</nav>
+					</div>
+				</div>
+			</div>
+
+			<!-- body -->
+			<div class="body col-span-12 md:col-span-11">
+				<div class="grid grid-cols-12 gap-2">
+					<!-- profile -->
+					<div id="profile" class="">
+						<div class="flex justify-center items-center">
+							<div class="hidden md:block">
+								<img src="/assets/avatar.png" alt="profile" />
+							</div>
+
+							<div class="block md:hidden">
+								<img
+									class="rounded-full"
+									src="/assets/avatar_2.jpeg"
+									alt="profile"
+								/>
+							</div>
+						</div>
+
+						<div class="p-2">
+							<!-- name -->
+							<div class="text-center pt-2">
+								<h1 class="font-bold text-2xl">Ho Vinh Tin</h1>
+								<h1 class="font-bold text-green-500 text-sm">
+									.NET Developer Intern
+								</h1>
+							</div>
+
+							<!-- social -->
+							<div class="flex justify-center items-center gap-5 text-[1.5rem] pt-2">
+								<a
+									target="_blank"
+									href="https://github.com/VinhTin-AQUA"
+									class="text-[e6edf3]"
+								>
+									<i class="fa-brands fa-github"></i>
+								</a>
+
+								<a
+									target="_blank"
+									href="https://www.linkedin.com/in/ho-vinh-tin/"
+									class="text-[#0a66c2]"
+								>
+									<i class="fa-brands fa-linkedin"></i>
+								</a>
+							</div>
+
+							<!-- cv -->
+							<div class="pt-2 uppercase text-center grid grid-cols-1">
+								<div>
+									<a
+										class="font-bold"
+										href="/assets/HO-VINH-TIN.pdf"
+										target="_blank"
+										>My CV</a
+									>
+								</div>
+								<!-- <div>
+									<a href="#">Contact Me</a>
+								</div> -->
+							</div>
+						</div>
+					</div>
+
+					<!-- content -->
+					<div
+						class="md:min-h-[90dvh] hidden md:block col-span-12 md:col-span-7 overflow-hidden bg-white rounded-md"
+					>
+						<router-outlet></router-outlet>
+					</div>
+
+					<!-- content mobile -->
+					<div class="block md:hidden col-span-12">
+
+						<!-- about -->
+						<div id="about_1" class="">
+							<div class="py-3 border-b">
+								<h2 class="font-bold text-2xl">
+									<span class="text-[#15803d]">A</span>bout Me
+								</h2>
+							</div>
+
+							<div>
+								<div class="">
+									<span class="">
+										Hello! I'm
+										<span class="font-bold text-[#15803d]">Ho Vinh Tin</span>, a
+										student majoring in Information Technology with a passion
+										for software development and especially .NET technology. I
+										am always eager to learn and apply new technologies to
+										create useful and effective software solutions.
+									</span>
+								</div>
+
+								<div class="">
+									<span
+										>Goal:
+										<span class="font-bold"
+											>Become a professional .NET developer.</span
+										></span
+									>
+								</div>
+
+								<div class="grid grid-cols-5">
+									<div class="font-semibold col-span-2">Date of birth:</div>
+									<div class="col-span-3">February 12, 2003</div>
+
+									<div class="font-semibold col-span-2">Address:</div>
+									<div class="col-span-3">Thu Duc, Ho Chi Minh</div>
+
+									<div class="font-semibold col-span-2">Phone:</div>
+									<div class="col-span-3">0833402853</div>
+
+									<div class="font-semibold col-span-2">Email:</div>
+									<div class="col-span-3">hvtinc12htk2020&#64;gmail.com</div>
+								</div>
+
+								<!-- education -->
+								<div class="">
+									<div class="font-bold">EDUCATION</div>
+									<div class="">
+										<div class="grid grid-cols-2">
+											<div>INFORMATION TECHNOLOGY</div>
+											<div class="font-bold">2021-Present</div>
+										</div>
+										<div>
+											Branch of University of Transport and Communication
+											-UTC2
+										</div>
+										<div>4rd year student with GPA: 3.35/4</div>
+									</div>
+								</div>
+
+								<!-- education -->
+								<div class="">
+									<div class="font-bold">CERTIFICATIONS</div>
+									<div class="grid grid-cols-5">
+										<div class="font-semibold">2023</div>
+										<div class="col-span-4">
+											ASP.NET Core Identity With Angular (JWT, Email
+											Conrmation)
+										</div>
+
+										<div class="font-semibold">2023</div>
+										<div class="col-span-4">Foundational C# with Microsoft</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- projects -->
+						<div id="projects_1" class="">
+							<div class="py-3 border-b">
+								<h2 class="font-bold text-2xl">
+									<span class="text-[#15803d]">P</span>rojects
+								</h2>
+							</div>
+
+							<div class="h-full">
+								<div class="project-item">
+									<h1 class="font-bold">PET ADOPTION</h1>
+									<h2 class="font-medium">Position: Back-end .NET</h2>
+									<h3>
+										Technology description: .NET Core API, HTML, CSS, Angular,
+										Tailwind CSS
+									</h3>
+									<h3 class="font-bold">My position in project</h3>
+									<ul class="lis">
+										<li>• Analyze and design databases.</li>
+										<li>• Programming and designing APIs for functions</li>
+										<li>
+											• Collaborate with the team to analyze project
+											requirements.
+										</li>
+									</ul>
+									<a
+										target="_blank"
+										class="text-[#0a66c2]"
+										href="https://github.com/VinhTin-AQUA/AdoptPet"
+									>
+										Github
+									</a>
+									<a
+										target="_blank"
+										class="text-[#0a66c2]"
+										routerLink="/projects/adopt-pet"
+									>
+										Details
+									</a>
+								</div>
+
+								<div class="project-item">
+									<h1 class="font-bold">BOOKING</h1>
+									<h2 class="font-medium">Position: Back-end .NET</h2>
+									<h3>Technology description: .NET Core MVC, HTML, CSS, JS</h3>
+									<h3 class="font-bold">My position in project</h3>
+									<ul class="lis">
+										<li>• Analyze and design databases.</li>
+										<li>• Programming and designing APIs for functions</li>
+										<li>
+											• Collaborate with the team to analyze project
+											requirements.
+										</li>
+									</ul>
+									<a
+										target="_blank"
+										class="text-[#0a66c2]"
+										href="https://github.com/VinhTin-AQUA/Booking_Du_lich_HocKy5"
+									>
+										Github
+									</a>
+									<a
+										target="_blank"
+										class="text-[#0a66c2]"
+										routerLink="/projects/booking"
+									>
+										Details
+									</a>
+								</div>
+							</div>
+						</div>
+
+						<!-- experience -->
+						<div id="experience_1" class="">
+							<div class="py-3 border-b mb-1">
+								<h2 class="font-bold text-2xl">
+									<span class="text-[#15803d]">E</span>xperience
+								</h2>
+							</div>
+
+							<div class="">
+								<div class="flex rounded-lg flex-col">
+									<div class=" mb-4 bg-[#60a5fa] flex items-center p-3 rounded-md">
+										<div
+											class="w-10 h-10 mr-3 inline-flex items-center justify-center rounded-full text-white flex-shrink-0"
+										>
+											<img
+												class="rounded-full"
+												src="/assets/fb3e6e95-93bb-4259-9394-d116fa746291.jpg"
+												alt=""
+											/>
+										</div>
+										<h2 class=" text-lg title-font font-medium">
+											BACK-END .NET
+										</h2>
+									</div>
+
+									<div class="flex items-center mb-3">
+										<h2 class="title-font font-medium">
+											Aloper Startup 05/2024 - Present
+										</h2>
+									</div>
+
+									<div class="flex-grow">
+										<ul>
+											<li>
+												• Analyze, design databases, and create procedures
+												to serve complex functions.
+											</li>
+											<li>
+												• API programming according to company requirements.
+												Modify, update, and maintain software.
+											</li>
+											<li>• Deploy software with Docker on VPS.</li>
+											<li>
+												• Coordinate with the team to analyze customer
+												requirements.
+											</li>
+											<li>• Find solutions to related problems.</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Skills -->
+						<div id="skills_1" class="">
+							<div class="py-3 border-b">
+								<h2 class="font-bold text-2xl">
+									<span class="text-[#15803d]">S</span>kills
+								</h2>
+							</div>
+
+							<div class="">
+								<div class="mb-3">
+									<h1 class="font-bold text-xl">ADVANCED SKILLS</h1>
+									<ul>
+										<li>• Profi cient in C# programming language and OOP.</li>
+										<li>• Profi cient in .NET Core API, and .NET Core MVC.</li>
+										<li>• Good use of LINQ, Entity Framework.</li>
+										<li>• Works well with SQL Server.</li>
+										<li>• Profi cient in Github.</li>
+										<li>• Good use of Docker.</li>
+										<li>• Can use JavaScript programming language.</li>
+										<li>
+											• Experience working with HTML, CSS, Angular, Bootstrap,
+											and Tailwind CSS.
+										</li>
+										<li>• Can use basic RabitMQ.</li>
+									</ul>
+								</div>
+
+								<div>
+									<h1 class="font-bold text-xl">SOFT SKILLS</h1>
+									<ul>
+										<li>• Communicate well.</li>
+										<li>• Read and understand English documents well.</li>
+										<li>• Good teamwork.</li>
+										<li>• Effective problem-solving and research abilities.</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

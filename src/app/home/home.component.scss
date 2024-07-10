@@ -1,0 +1,111 @@
+.gradient {
+	width: 100vw;
+	min-height: 100vh;
+	background: linear-gradient(334deg, #22c55e, #e11d48, #1d4ed8);
+	background-size: 180% 180%;
+	animation: gradient-animation 6s ease infinite;
+}
+
+@keyframes gradient-animation {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.wrapper {
+	padding: 10px;
+}
+
+/* nav */
+.nav {
+	@apply hidden md:block;
+}
+
+#nav-setting {
+	@apply mb-3 rounded-md overflow-hidden text-center cursor-pointer py-1.5 duration-150;
+	@apply bg-[var(--bg-light)];
+	@apply dark:bg-[var(--bg-dark)] dark:text-[var(--text-dark)];
+
+	&:hover {
+		@apply bg-[var(--bg-light-hover)] text-[var(--text-light-hover)];
+		@apply dark:bg-[var(--bg-dark-hover)] dark:text-[var(--text-dark-hover)];
+	}
+
+	.nav-btn-setting {
+		@apply text-center px-1 py-1.5 mx-auto block;
+		font-size: 1.5rem;
+	}
+}
+
+#nav-bar {
+	@apply rounded-md overflow-hidden;
+	@apply bg-[var(--bg-light)];
+	@apply dark:bg-[var(--bg-dark)] dark:text-[var(--text-dark)];
+
+	.nav-item {
+		@apply text-center cursor-pointer py-1.5 duration-150 block select-none;
+		@apply dark:text-[var(--text-dark)];
+
+		&:hover {
+			@apply bg-[var(--bg-light-hover)] text-[var(--text-light-hover)];
+			@apply dark:bg-[var(--bg-dark-hover)];
+
+			span {
+				@apply text-[var(--text-light-hover)];
+				@apply dark:text-[var(--text-dark-hover)];
+			}
+		}
+	}
+
+	.nav-btn-icon {
+		@apply text-center px-1 pt-1 mx-auto block;
+		font-size: 1.5rem;
+		user-select: none;
+	}
+}
+
+.menu-active {
+	@apply bg-[var(--bg-light-active)] text-[var(--text-light-active)];
+	@apply dark:bg-[var(--bg-dark-active)] dark:text-[var(--text-dark-active)];
+
+	span {
+		@apply text-white;
+		@apply dark:text-[var(--text-dark-active)];
+	}
+}
+
+/* nav mobile */
+#nav-mobile {
+	@apply block md:hidden bg-white px-4 rounded-md;
+	@apply dark:bg-[var(--bg-dark)] dark:text-[var(--text-dark)];
+
+	.btn-change-mode {
+		@apply inline-flex items-center bg-gray-100 border-0 py-3 px-4 focus:outline-none hover:bg-gray-200 rounded text-[1.3rem];
+		@apply dark:text-[var(--text-dark)] dark:bg-[var(--bg-dark)];
+	}
+
+	.nav-btn-mobile {
+		@apply mr-5 duration-150 hover:text-[var(--color-green)] hover:font-bold;
+	}
+}
+
+// profile
+#profile {
+	@apply md:min-h-[90dvh] col-span-12 md:col-span-5 bg-white p-2 pb-0 rounded-md;
+	@apply dark:bg-[var(--bg-dark)] dark:text-[var(--text-dark)];
+}
+
+/* mobile content */
+#about_1, #projects_1, #experience_1, #skills_1 {
+	@apply rounded-md bg-[var(--bg-light)] mb-2 p-4;
+	@apply dark:bg-[var(--bg-dark)] dark:text-[var(--text-dark)];
+
+}
+
+
