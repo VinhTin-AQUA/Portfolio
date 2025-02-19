@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+@use 'tailwindcss';
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	overflow-x: hidden;
+
+    font-family: 'Bodoni MT';
+    background-color: oklch(0.141 0.005 285.823);
+    color: white;
+}
+
