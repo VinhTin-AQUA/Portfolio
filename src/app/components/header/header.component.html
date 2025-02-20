@@ -11,10 +11,11 @@
 				>
 					<ul class="font-medium flex flex-col p-0 flex-row space-x-8 mt-0">
 						@for (item of items; track $index) {
-						<li>
+						<li class="">
 							<a
-								href="#"
-								class="block bg-blue-700 rounded-sm md:bg-transparent"
+								[routerLink]="item.url"
+								routerLinkActive="active"
+								class="block bg-blue-700 rounded-sm hover:text-green-600 bg-transparent"
 								aria-current="page"
 								>{{ item.name }}</a
 							>
@@ -83,15 +84,16 @@
 		aria-label="Sidebar"
 	>
 		<div class="h-full flex">
-			<div class="w-64 h-full px-3 py-4 overflow-y-auto  bg-zinc-900">
+			<div class="w-64 h-full px-3 py-4 overflow-y-auto bg-zinc-900">
 				<ul class="space-y-2 font-medium">
 					@for (item of items; track $index) {
 					<li>
 						<a
-							href="#"
+							[routerLink]="item.url"
+							routerLinkActive="active"
 							class="flex items-center p-2 rounded-lg hover:bg-gray-100 hover:text-zinc-900 group"
 						>
-							<img [src]="item.icon" class="w-5 h-5" alt="" />
+							<app-svg-outline-icon [iconName]="item.icon" stroke="green" classes="w-6 h-6"></app-svg-outline-icon>
 
 							<span class="flex-1 ms-3 whitespace-nowrap">{{ item.name }}</span>
 						</a>

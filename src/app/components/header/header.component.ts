@@ -1,9 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { RouterLink, RouterLinkActive } from '@angular/router';
+import { SvgOutlineIconComponent } from '../svg-outline-icon/svg-outline-icon.component';
 
 @Component({
 	selector: 'app-header',
-	imports: [CommonModule],
+	imports: [CommonModule, RouterLink, RouterLinkActive, SvgOutlineIconComponent],
 	templateUrl: './header.component.html',
 	styleUrl: './header.component.scss',
 })
@@ -13,22 +15,22 @@ export class HeaderComponent {
 		{
 			name: 'Home',
 			url: 'home',
-			icon: 'svgs/home.svg',
+			icon: 'home',
 		},
         {
 			name: 'Experience',
 			url: 'experience',
-			icon: 'svgs/experience.svg',
+			icon: 'experience',
 		},
         {
 			name: 'Projects',
 			url: 'projects',
-			icon: 'svgs/project.svg',
+			icon: 'project',
 		},
         {
 			name: 'Hobbies',
 			url: 'hobbies',
-			icon: 'svgs/hobby.svg',
+			icon: 'hobby',
 		},
 	];
 

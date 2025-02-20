@@ -1,0 +1,75 @@
+<div>
+	<div class="container mx-auto">
+		<div class="mx-auto max-w-[1200px] p-6">
+			@for (item of experience; track $index) {
+			<div
+				class="p-6 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+			>
+				<!-- company -->
+				<div>
+					<h5
+						class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white uppercase"
+					>
+						{{ item.companyName }}
+					</h5>
+				</div>
+
+				<!-- position -->
+				<div class="flex flex-wrap md:gap-5 text-[1.3rem] mb-3">
+					<div>
+						<span class="text-green-600">{{ item.position }}</span>
+					</div>
+
+					<div>
+						<span>{{ item.time }}</span>
+					</div>
+				</div>
+
+				<!-- tech stack -->
+				<div class="mb-3">
+					<div>
+						<span class="text-[1.8rem]">Tech stack</span>
+					</div>
+
+					<div class="flex flex-wrap gap-1">
+						@for (icon of item.techStackIcons; track $index) {
+						<app-svg-logo
+							[classes]="icon.classes"
+							[iconName]="icon.name"
+						></app-svg-logo>
+						}
+					</div>
+				</div>
+
+				<!-- Main Task -->
+				<div class="mb-3">
+					<div>
+						<span class="text-[1.8rem]">Main Task</span>
+					</div>
+
+					<div class="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-5">
+						@for (task of item.mainTasks; track $index) {
+						<p>
+							{{ task }}
+						</p>
+						}
+					</div>
+				</div>
+
+				<!-- description -->
+				<div class="mb-3">
+					<div>
+						<span class="text-[1.8rem]">Description</span>
+					</div>
+
+					<div class="">
+						<p>
+							{{ item.description }}
+						</p>
+					</div>
+				</div>
+			</div>
+			}
+		</div>
+	</div>
+</div>
