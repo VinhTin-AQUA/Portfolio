@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 	styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
-	showSideBar: boolean = true;
+	showSideBar: boolean = false;
 	items: any = [
 		{
 			name: 'Home',
@@ -34,7 +34,12 @@ export class HeaderComponent {
 
 	constructor() {}
 
-	onShowSideBar() {
-		this.showSideBar = !this.showSideBar;
+	onShowSideBar(flag: boolean | null = null) {
+        if(!flag) {
+            this.showSideBar = !this.showSideBar;
+        }
+		else {
+            this.showSideBar = flag;
+        }
 	}
 }
