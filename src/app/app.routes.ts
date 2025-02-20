@@ -7,6 +7,6 @@ export const routes: Routes = [
 	
 	{ path: 'home', component: HomeComponent, title: 'Home' },
 	{ path: 'experience', component: ExperienceComponent, title: 'Experience' },
-	{ path: 'projects', component: ProjectsComponent, title: 'Projects' },
+	{ path: 'projects', loadChildren:() => import('./projects/projects.routes').then(r => r.projectRoutes) },
     { path: '**', redirectTo: 'home', pathMatch: 'full' },
 ];

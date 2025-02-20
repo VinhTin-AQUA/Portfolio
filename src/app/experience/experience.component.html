@@ -3,12 +3,12 @@
 		<div class="mx-auto max-w-[1200px] p-6">
 			@for (item of experience; track $index) {
 			<div
-				class="p-6 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+				class="p-6 border border-gray-200 rounded-lg shadow-sm bg-gray-800 "
 			>
 				<!-- company -->
 				<div>
 					<h5
-						class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white uppercase"
+						class="mb-2 text-2xl font-bold tracking-tight text-white uppercase"
 					>
 						{{ item.companyName }}
 					</h5>
@@ -37,6 +37,22 @@
 							[classes]="icon.classes"
 							[iconName]="icon.name"
 						></app-svg-logo>
+						}
+					</div>
+				</div>
+
+                				<!-- tools -->
+				<div class="mb-3">
+					<div>
+						<span class="text-[1.1rem] md:text-[1.8rem]">Tools</span>
+					</div>
+
+					<div class="flex flex-wrap gap-1">
+						@for (icon of item.tools; track $index) {
+						<app-tool-logo
+							[classes]="icon.classes"
+							[iconName]="icon.name"
+						></app-tool-logo>
 						}
 					</div>
 				</div>
