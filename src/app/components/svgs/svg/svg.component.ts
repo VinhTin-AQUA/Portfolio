@@ -26,6 +26,12 @@ import { FlutterSvgComponent } from '../flutter-svg/flutter-svg.component';
 import { FirebaseSvgComponent } from '../firebase-svg/firebase-svg.component';
 import { CPlusPlusSvgComponent } from '../c-plus-plus-svg/c-plus-plus-svg.component';
 import { SdlSvgComponent } from '../sdl-svg/sdl-svg.component';
+import { CodingSvgComponent } from '../coding-svg/coding-svg.component';
+import { PhotographySvgComponent } from '../photography-svg/photography-svg.component';
+import { RunningSvgComponent } from '../running-svg/running-svg.component';
+import { GymSvgComponent } from '../gym-svg/gym-svg.component';
+import { FruitSvgComponent } from '../fruit-svg/fruit-svg.component';
+import { GamingSvgComponent } from '../gaming-svg/gaming-svg.component';
 
 @Component({
 	selector: 'app-svg',
@@ -57,6 +63,12 @@ import { SdlSvgComponent } from '../sdl-svg/sdl-svg.component';
 		FirebaseSvgComponent,
 		CPlusPlusSvgComponent,
 		SdlSvgComponent,
+        CodingSvgComponent,
+        PhotographySvgComponent,
+        RunningSvgComponent,
+        GymSvgComponent,
+        FruitSvgComponent,
+        GamingSvgComponent,
 	],
 	templateUrl: './svg.component.html',
 	styleUrl: './svg.component.scss',
