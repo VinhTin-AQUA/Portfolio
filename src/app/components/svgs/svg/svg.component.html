@@ -1,0 +1,89 @@
+@switch (name) {
+    @case ('') {
+        <p class="text-white">Trong</p>
+    }
+    @case('android-studio'){
+        <app-android-studio-svg [classes]="classes"></app-android-studio-svg>
+    }
+    @case('angular'){
+        <app-angular-svg [classes]="classes"></app-angular-svg>
+    }
+    @case('c-plus-plus'){
+        <app-c-plus-plus-svg [classes]="classes"></app-c-plus-plus-svg>
+    }
+    @case('c-sharp'){
+        <app-c-sharp-svg [classes]="classes"></app-c-sharp-svg>
+    }
+    @case('dart'){
+        <app-dart-svg [classes]="classes"></app-dart-svg>
+    }
+    @case('docker'){
+        <app-docker-svg [classes]="classes"></app-docker-svg>
+    }
+    @case ('experience') {
+        <app-experience-svg [classes]="classes" [stroke]="stroke"></app-experience-svg>
+    }
+    @case('firebase'){
+        <app-firebase-svg [classes]="classes"></app-firebase-svg>
+    }
+    @case('flutter'){
+        <app-flutter-svg [classes]="classes"></app-flutter-svg>
+    }
+    @case ('hobby') {
+        <app-hobby-svg [classes]="classes" [stroke]="stroke"></app-hobby-svg>
+    }
+    @case ('home') {
+        <app-home-svg [classes]="classes" [stroke]="stroke"></app-home-svg>
+    }
+    @case('hoppscotch'){
+        <app-hoppscotch-svg [classes]="classes"></app-hoppscotch-svg>
+    }
+    @case('kafka'){
+        <app-kafka-svg [classes]="classes"></app-kafka-svg>
+    }
+    @case('linux'){
+        <app-linux-svg [classes]="classes"></app-linux-svg>
+    }
+    @case('minio'){
+        <app-minio-svg [classes]="classes"></app-minio-svg>
+    }
+    @case('mongodb'){
+        <app-mongodb-svg [classes]="classes"></app-mongodb-svg>
+    }
+    @case('nestjs'){
+        <app-nestjs-svg [classes]="classes"></app-nestjs-svg>
+    }
+    @case('.net'){
+        <app-net-core-svg [classes]="classes"></app-net-core-svg>
+    }
+    @case('nginx'){
+        <app-nginx-svg [classes]="classes"></app-nginx-svg>
+    }
+    @case('project'){
+        <app-project-svg [classes]="classes" [stroke]="stroke"></app-project-svg>
+    }
+    @case('python'){
+        <app-python-svg [classes]="classes"></app-python-svg>
+    }
+    @case('redis-insight'){
+        <app-redis-insight-svg [classes]="classes"></app-redis-insight-svg>
+    }
+    @case('redis'){
+        <app-redis-svg [classes]="classes"></app-redis-svg>
+    }
+    @case('sdl'){
+        <app-sdl-svg [classes]="classes"></app-sdl-svg>
+    }
+    @case('sql'){
+        <app-sql-svg [classes]="classes"> </app-sql-svg>
+    }
+    @case('visual-studio'){
+        <app-visual-studio-svg [classes]="classes"></app-visual-studio-svg>
+    }
+    @case('vscode'){
+        <app-vscode-svg [classes]="classes"></app-vscode-svg>
+    } @default {
+        <p class="text-white">Loi</p>
+    }
+}
+

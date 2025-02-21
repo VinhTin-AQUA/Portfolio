@@ -29,10 +29,7 @@
 
 					<div class="flex flex-wrap gap-1">
 						@for (icon of item.techStackIcons; track $index) {
-						<app-svg-logo
-							[classes]="icon.classes"
-							[iconName]="icon.name"
-						></app-svg-logo>
+						    <app-svg [name]="icon.name" [classes]="icon.classes"></app-svg>
 						}
 					</div>
 				</div>
@@ -45,10 +42,7 @@
 
 					<div class="flex flex-wrap gap-1">
 						@for (icon of item.tools; track $index) {
-						<app-tool-logo
-							[classes]="icon.classes"
-							[iconName]="icon.name"
-						></app-tool-logo>
+                            <app-svg [name]="icon.name" [classes]="icon.classes"></app-svg>
 						}
 					</div>
 				</div>

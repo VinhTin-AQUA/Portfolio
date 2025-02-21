@@ -1,27 +1,22 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import {
-	NavigationEnd,
-	Router,
-	RouterLink,
-	RouterLinkActive,
-} from '@angular/router';
-import { SvgOutlineIconComponent } from '../svg-outline-icon/svg-outline-icon.component';
+import { NavigationEnd, Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { filter } from 'rxjs';
+import { SvgComponent } from '../svgs/svg/svg.component';
 
 @Component({
 	selector: 'app-header',
-	imports: [CommonModule, RouterLink, RouterLinkActive, SvgOutlineIconComponent],
+	imports: [CommonModule, RouterLink, RouterLinkActive, SvgComponent],
 	templateUrl: './header.component.html',
 	styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
 	showSideBar: boolean = false;
 	activatedItem: any = {
-        name: 'Home',
-        url: 'home',
-        icon: 'home',
-    };
+		name: 'Home',
+		url: 'home',
+		icon: 'home',
+	};
 
 	items: any = [
 		{
@@ -51,12 +46,12 @@ export class HeaderComponent {
 		this.router.events
 			.pipe(filter((event: any) => event instanceof NavigationEnd))
 			.subscribe((event: any) => {
-                const item = this.items.find((x: any) => x.url === event.url.split('/')[1])
-                if(item) {
-                    this.activatedItem.name = item.name
-                    this.activatedItem.url = item.url
-                    this.activatedItem.icon = item.icon
-                }
+				const item = this.items.find((x: any) => x.url === event.url.split('/')[1]);
+				if (item) {
+					this.activatedItem.name = item.name;
+					this.activatedItem.url = item.url;
+					this.activatedItem.icon = item.icon;
+				}
 			});
 	}
 

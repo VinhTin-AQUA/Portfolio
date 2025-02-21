@@ -30,13 +30,8 @@
 				<div
 					class="border border-white rounded-full flex items-center justify-between gap-2 w-[150px] text-center px-3"
 				>
-					<app-svg-outline-icon
-						[iconName]="activatedItem.icon"
-						stroke="white"
-						classes="w-6 h-6"
-					></app-svg-outline-icon>
-
-					<span class="text-center">{{ activatedItem.name }}</span>
+					<app-svg [name]="activatedItem.icon" classes="w-6 h-6" stroke="white"></app-svg>
+					<span class="text-center select-none">{{ activatedItem.name }}</span>
 					<span></span>
 				</div>
 			</div>
@@ -46,13 +41,8 @@
 					(click)="onShowSideBar()"
 					class="cursor-pointer border border-white rounded-full flex items-center justify-between gap-2 w-[150px] text-center px-3"
 				>
-					<app-svg-outline-icon
-						[iconName]="activatedItem.icon"
-						stroke="white"
-						classes="w-6 h-6"
-					></app-svg-outline-icon>
-
-					<span class="text-center">{{ activatedItem.name }}</span>
+					<app-svg [name]="activatedItem.icon" classes="w-6 h-6" stroke="white"></app-svg>
+					<span class="text-center select-none">{{ activatedItem.name }}</span>
 					<span></span>
 				</div>
 			</div>
@@ -81,11 +71,7 @@
 							routerLinkActive="active"
 							class="flex items-center p-2 rounded-lg hover:bg-gray-100 hover:text-zinc-900 group"
 						>
-							<app-svg-outline-icon
-								[iconName]="item.icon"
-								stroke="green"
-								classes="w-6 h-6"
-							></app-svg-outline-icon>
+							<app-svg [name]="item.icon" classes="w-6 h-6" stroke="green"></app-svg>
 
 							<span class="flex-1 ms-3 whitespace-nowrap">{{ item.name }}</span>
 						</a>

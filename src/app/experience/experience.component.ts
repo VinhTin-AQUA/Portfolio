@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
-import { SvgLogoComponent } from '../components/svg-logo/svg-logo.component';
 import { experience } from './experience.data';
-import { ToolLogoComponent } from '../components/tool-logo/tool-logo.component';
+import { SvgComponent } from '../components/svgs/svg/svg.component';
 
 @Component({
 	selector: 'app-experience',
-	imports: [SvgLogoComponent, ToolLogoComponent],
+	imports: [SvgComponent],
 	templateUrl: './experience.component.html',
 	styleUrl: './experience.component.scss',
 })

@@ -145,7 +145,8 @@ export const projects = [
 			{
 				name: 'c-sharp',
 				classes: 'w-10 h-10',
-			},{
+			},
+			{
 				name: 'sql',
 				classes: 'w-10 h-10',
 			},
@@ -153,7 +154,6 @@ export const projects = [
 				name: 'angular',
 				classes: 'w-10 h-10',
 			},
-			
 		],
 		tools: [
 			{
