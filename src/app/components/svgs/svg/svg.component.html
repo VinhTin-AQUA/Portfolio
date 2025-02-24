@@ -98,6 +98,8 @@
         <app-tailwind-svg [classes]="classes"></app-tailwind-svg>
     } @case('skill'){
         <app-skill-svg [classes]="classes" [fill]="fill" [stroke]="stroke"></app-skill-svg>
+    } @case('pytorch'){
+        <app-pytorch-svg [classes]="classes"></app-pytorch-svg>
     } @default {
         <p class="text-white">Loi</p>
     }

@@ -8,6 +8,10 @@ export const projects = [
 				name: 'python',
 				classes: 'w-10 h-10',
 			},
+            {
+				name: 'pytorch',
+				classes: 'w-10 h-10',
+			},
 			{
 				name: 'kafka',
 				classes: 'w-10 h-10',
