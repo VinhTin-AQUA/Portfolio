@@ -94,6 +94,10 @@
         <app-fruit-svg [classes]="classes"></app-fruit-svg>
     } @case('gaming'){
         <app-gaming-svg [classes]="classes"></app-gaming-svg>
+    } @case('tailwind'){
+        <app-tailwind-svg [classes]="classes"></app-tailwind-svg>
+    } @case('skill'){
+        <app-skill-svg [classes]="classes" [fill]="fill" [stroke]="stroke"></app-skill-svg>
     } @default {
         <p class="text-white">Loi</p>
     }

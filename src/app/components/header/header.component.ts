@@ -34,6 +34,11 @@ export class HeaderComponent {
 			url: 'projects',
 			icon: 'project',
 		},
+        {
+			name: 'Skills',
+			url: 'skill',
+			icon: 'skill',
+		},
 		{
 			name: 'Hobbies',
 			url: 'hobbies',

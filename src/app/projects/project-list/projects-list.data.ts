@@ -20,6 +20,10 @@ export const projects = [
 				name: 'angular',
 				classes: 'w-10 h-10',
 			},
+            {
+				name: 'tailwind',
+				classes: 'w-10 h-10',
+			},
 			{
 				name: 'mongodb',
 				classes: 'w-10 h-10',
@@ -154,6 +158,10 @@ export const projects = [
 				name: 'angular',
 				classes: 'w-10 h-10',
 			},
+            {
+				name: 'tailwind',
+				classes: 'w-10 h-10',
+			},
 		],
 		tools: [
 			{
@@ -161,8 +169,14 @@ export const projects = [
 				classes: 'w-10 h-10',
 			},
 		],
-		mainTasks: ['✅ Build a pet management and search interface'],
-		position: 'Front-end Developer',
+		mainTasks: [
+			'✅ Build a pet management and search interface',
+			'✅ Build functions to manage, add, update, search, and delete pets and species',
+			'✅ Build functions to manage, search, view lists, and lock user accounts',
+			'✅ Build user account functionality, login, register, change password, forget password',
+			'✅ Build user-friendly interfaces.',
+		],
+		position: 'Full-stack Developer',
 		url: '',
 		github: 'https://github.com/VinhTin-AQUA/AdoptPet',
 	},
@@ -217,14 +231,14 @@ export const projects = [
 				classes: 'w-10 h-10',
 			},
 		],
-		mainTasks: ['✅ Xây dựng giao diện và gọi API đến hệ thống trường học'],
+		mainTasks: ['✅ Build interface and call API to school system'],
 		position: 'Front-end Developer',
 		url: '',
 		github: 'https://github.com/VinhTin-AQUA/Tools/tree/mai/UTC2-Student-Desktop',
 	},
 	{
 		projectName: 'Rogue Lite',
-		description: '☑️ Trò chơi dựa được lấy ý tưởng từ game Soul Knight',
+		description: '☑️ The game is based on the idea of ​​the game Soul Knight.',
 		techStackIcons: [
 			{
 				name: 'c-plus-plus',

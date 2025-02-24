@@ -32,6 +32,8 @@ import { RunningSvgComponent } from '../running-svg/running-svg.component';
 import { GymSvgComponent } from '../gym-svg/gym-svg.component';
 import { FruitSvgComponent } from '../fruit-svg/fruit-svg.component';
 import { GamingSvgComponent } from '../gaming-svg/gaming-svg.component';
+import { TailwindSvgComponent } from '../tailwind-svg/tailwind-svg.component';
+import { SkillSvgComponent } from '../skill-svg/skill-svg.component';
 
 @Component({
 	selector: 'app-svg',
@@ -69,6 +71,8 @@ import { GamingSvgComponent } from '../gaming-svg/gaming-svg.component';
         GymSvgComponent,
         FruitSvgComponent,
         GamingSvgComponent,
+        TailwindSvgComponent,
+        SkillSvgComponent,
 	],
 	templateUrl: './svg.component.html',
 	styleUrl: './svg.component.scss',
