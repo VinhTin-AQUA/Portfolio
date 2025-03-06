@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { skills } from './sills.data';
+import { knowledgeOf, skilledIn, tools } from './skills.data';
 import { SvgComponent } from '../components/svgs/svg/svg.component';
 
 @Component({
@@ -9,5 +9,7 @@ import { SvgComponent } from '../components/svgs/svg/svg.component';
 	styleUrl: './skill.component.scss',
 })
 export class SkillComponent {
-	skills: any = skills;
+	knowledgeOf: any = knowledgeOf;
+	skilledIn: any = skilledIn;
+	tools: any = tools;
 }

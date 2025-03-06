@@ -35,6 +35,22 @@ import { GamingSvgComponent } from '../gaming-svg/gaming-svg.component';
 import { TailwindSvgComponent } from '../tailwind-svg/tailwind-svg.component';
 import { SkillSvgComponent } from '../skill-svg/skill-svg.component';
 import { PytorchSvgComponent } from '../pytorch-svg/pytorch-svg.component';
+import { GitSvgComponent } from '../git-svg/git-svg.component';
+import { GithubSvgComponent } from '../github-svg/github-svg.component';
+import { GraphqlSvgComponent } from '../graphql-svg/graphql-svg.component';
+import { HtmlSvgComponent } from '../html-svg/html-svg.component';
+import { JavascriptSvgComponent } from '../javascript-svg/javascript-svg.component';
+import { JenkinsSvgComponent } from '../jenkins-svg/jenkins-svg.component';
+import { MysqlSvgComponent } from '../mysql-svg/mysql-svg.component';
+import { CssSvgComponent } from '../css-svg/css-svg.component';
+import { PostmanSvgComponent } from '../postman-svg/postman-svg.component';
+import { SeleniumSvgComponent } from '../selenium-svg/selenium-svg.component';
+import { SassSvgComponent } from '../sass-svg/sass-svg.component';
+import { SqliteSvgComponent } from '../sqlite-svg/sqlite-svg.component';
+import { SwaggerSvgComponent } from '../swagger-svg/swagger-svg.component';
+import { TypescriptSvgComponent } from '../typescript-svg/typescript-svg.component';
+import { UbuntuSvgComponent } from '../ubuntu-svg/ubuntu-svg.component';
+import { VercelSvgComponent } from '../vercel-svg/vercel-svg.component';
 
 @Component({
 	selector: 'app-svg',
@@ -75,6 +91,22 @@ import { PytorchSvgComponent } from '../pytorch-svg/pytorch-svg.component';
         TailwindSvgComponent,
         SkillSvgComponent,
         PytorchSvgComponent,
+        GitSvgComponent,
+        GithubSvgComponent,
+        GraphqlSvgComponent,
+        HtmlSvgComponent,
+        JavascriptSvgComponent,
+        JenkinsSvgComponent,
+        MysqlSvgComponent,
+        CssSvgComponent,
+        PostmanSvgComponent,
+        SeleniumSvgComponent,
+        SassSvgComponent,
+        SqliteSvgComponent,
+        SwaggerSvgComponent,
+        TypescriptSvgComponent,
+        UbuntuSvgComponent,
+        VercelSvgComponent,
 	],
 	templateUrl: './svg.component.html',
 	styleUrl: './svg.component.scss',
