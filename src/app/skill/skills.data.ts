@@ -150,6 +150,10 @@ export const tools = [
 		icon: 'visual-studio',
 	},
     {
+		name: 'Redis Insight',
+		icon: 'redis-insight',
+	},
+    {
 		name: 'Vercel',
 		icon: 'vercel',
 	},
