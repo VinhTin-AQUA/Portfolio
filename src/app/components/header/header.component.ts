@@ -44,6 +44,11 @@ export class HeaderComponent {
 			url: 'hobbies',
 			icon: 'hobby',
 		},
+        {
+			name: 'My cheat sheet',
+			href: 'https://newtun-code-cheat-sheet.is-a.dev/home',
+			icon: 'hobby',
+		},
 	];
 
 	constructor(private router: Router) {}
