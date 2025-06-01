@@ -1,15 +1,15 @@
 export const projects = [
 	{
-		projectName: 'IDS RESNET 50 System',
+		projectName: 'Video Streaming App',
 		description:
-			'☑️ DDOS attack detection prediction system uses a predictive AI model, based on real-time network traffic of the system',
+			'☑️ Build a video streaming system with a microservices architecture, using modern technologies such as ASP.NET Core API, NestJS, MongoDB, MinIO, Docker, Kubernetes, and gRPC. The application enables video processing and transcoding with FFmpeg, content delivery via MPEG-DASH, and provides a user interface with Angular. The system ensures scalability, high reliability, and optimal performance in a distributed environment.',
 		techStackIcons: [
 			{
-				name: 'python',
+				name: 'angular',
 				classes: 'w-10 h-10',
 			},
-            {
-				name: 'pytorch',
+			{
+				name: 'c-sharp',
 				classes: 'w-10 h-10',
 			},
 			{
@@ -21,10 +21,82 @@ export const projects = [
 				classes: 'w-10 h-10',
 			},
 			{
-				name: 'angular',
+				name: '.net',
+				classes: 'w-10 h-10',
+			},
+			{
+				name: 'tailwind',
+				classes: 'w-10 h-10',
+			},
+			{
+				name: 'mongodb',
+				classes: 'w-10 h-10',
+			},
+			{
+				name: 'docker',
+				classes: 'w-10 h-10',
+			},
+			{
+				name: 'minio',
+				classes: 'w-10 h-10',
+			},
+			{
+				name: 'grpc',
+				classes: 'w-10 h-10',
+			},
+			{
+				name: 'k8s',
 				classes: 'w-10 h-10',
 			},
             {
+				name: 'ffmpeg',
+				classes: 'w-10 h-10',
+			},
+		],
+		tools: [
+			{
+				name: 'vscode',
+				classes: 'w-10 h-10',
+			},
+			{
+				name: 'visual-studio',
+				classes: 'w-10 h-10',
+			},
+		],
+		mainTasks: [
+			'✅ Design and develop a friendly, modern video viewing interface using Angular, optimizing user experience',
+			'✅ Build a video upload service in the form of chunked upload, effectively storing on the MinIO object storage system',
+			'✅ Develop a video metadata management service, using MongoDB to store information and content processing status.',
+			'✅ Deploy a video processing and transcoding service to adaptive streaming format according to the MPEG-DASH standard, using FFmpeg',
+			'✅ Build an adaptive video distribution service via HTTP with MPEG-DASH',
+			'✅ Use Docker to containerize each microservice, deploy the entire system on Kubernetes, and establish effective communication between services via gRPC',
+		],
+		position: 'Full-stack Developer',
+		url: '',
+		github: 'https://github.com/VinhTin-AQUA/Video-Streaming-App',
+	},
+	{
+		projectName: 'IDS RESNET 50 System',
+		description:
+			'☑️ DDOS attack detection prediction system uses a predictive AI model, based on real-time network traffic of the system',
+		techStackIcons: [
+			{
+				name: 'python',
+				classes: 'w-10 h-10',
+			},
+			{
+				name: 'pytorch',
+				classes: 'w-10 h-10',
+			},
+			{
+				name: 'nestjs',
+				classes: 'w-10 h-10',
+			},
+			{
+				name: 'angular',
+				classes: 'w-10 h-10',
+			},
+			{
 				name: 'tailwind',
 				classes: 'w-10 h-10',
 			},
@@ -54,7 +126,7 @@ export const projects = [
 		github: 'https://github.com/VinhTin-AQUA/IDS-RESNET-50-System',
 	},
 	{
-		projectName: 'Auto Scaling Image (Terminal)',
+		projectName: 'Auto Scaling Image',
 		description: '☑️ Automatic Image Enhancement API Call Tool',
 		techStackIcons: [
 			{
@@ -73,10 +145,10 @@ export const projects = [
 		],
 		position: 'Back-end Developer',
 		url: '',
-		github: 'https://github.com/VinhTin-AQUA/Tools/tree/mai/Auto%20Scaling%20Image%20(Terminal)',
+		github: 'https://github.com/VinhTin-AQUA/Auto-Scaling-Image',
 	},
 	{
-		projectName: 'Image Scaling Mobile',
+		projectName: 'Picance',
 		description: '☑️ Application calls API to automatically increase photo quality on mobile',
 		techStackIcons: [
 			{
@@ -103,7 +175,7 @@ export const projects = [
 		],
 		position: 'Full-stack Developer',
 		url: '',
-		github: 'https://github.com/VinhTin-AQUA/Tools/tree/mai/Image%20Scaling%20Mobile',
+		github: 'https://github.com/VinhTin-AQUA/picance',
 	},
 	{
 		projectName: 'Password management',
@@ -140,7 +212,7 @@ export const projects = [
 		],
 		position: 'Full-stack Developer',
 		url: '',
-		github: 'https://github.com/VinhTin-AQUA/Tools/tree/mai/Password%20management',
+		github: 'https://github.com/VinhTin-AQUA/Password-management',
 	},
 	{
 		projectName: 'AdoptPet',
@@ -162,7 +234,7 @@ export const projects = [
 				name: 'angular',
 				classes: 'w-10 h-10',
 			},
-            {
+			{
 				name: 'tailwind',
 				classes: 'w-10 h-10',
 			},
@@ -183,62 +255,6 @@ export const projects = [
 		position: 'Full-stack Developer',
 		url: '',
 		github: 'https://github.com/VinhTin-AQUA/AdoptPet',
-	},
-	{
-		projectName: 'Reminder App',
-		description:
-			'☑️ The app reminds us to take a break from work, or simply drink water when we are too focused on work and forget small things like taking care of ourselves, resting, or reminding ourselves of something.',
-		techStackIcons: [
-			{
-				name: '.net',
-				classes: 'w-10 h-10',
-			},
-			{
-				name: 'c-sharp',
-				classes: 'w-10 h-10',
-			},
-		],
-		tools: [
-			{
-				name: 'visual-studio',
-				classes: 'w-10 h-10',
-			},
-		],
-		mainTasks: [
-			'✅ Using WPF framework',
-			'✅ Building logic to store reminders, timers',
-			'✅ Building notifications on screen',
-			'✅ Asynchronous programming',
-			'✅ Building interface to manage reminders',
-		],
-		position: 'Full-stack Developer',
-		url: '',
-		github: 'https://github.com/VinhTin-AQUA/Tools/tree/mai/Reminder-App',
-	},
-	{
-		projectName: 'UTC2 Student Desktop',
-		description:
-			'☑️ The application uses the available API of the school system, creating an application to read notifications, view information, tuition, subjects, view scores,...',
-		techStackIcons: [
-			{
-				name: '.net',
-				classes: 'w-10 h-10',
-			},
-			{
-				name: 'c-sharp',
-				classes: 'w-10 h-10',
-			},
-		],
-		tools: [
-			{
-				name: 'visual-studio',
-				classes: 'w-10 h-10',
-			},
-		],
-		mainTasks: ['✅ Build interface and call API to school system'],
-		position: 'Front-end Developer',
-		url: '',
-		github: 'https://github.com/VinhTin-AQUA/Tools/tree/mai/UTC2-Student-Desktop',
 	},
 	{
 		projectName: 'Rogue Lite',

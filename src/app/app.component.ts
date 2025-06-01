@@ -52,12 +52,12 @@ class Particle {
             ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
 
             ctx.shadowBlur = 20; // Độ mờ của ánh sáng
-            ctx.shadowColor = `rgba(0, 245, 24, ${this.alpha})`; // Màu phát sáng
-            ctx.fillStyle = `rgba(255, 255, 255, ${this.alpha})`;
+            ctx.shadowColor = `rgba(22, 163, 74, ${this.alpha})`; // Màu phát sáng
+            ctx.fillStyle = `rgba(134, 239, 172, ${this.alpha})`;
             ctx.fill();
             ctx.closePath();
 
-            // Reset lại shadow để không ảnh hưởng đến các phần tử khác
+            // Reset lại shadow để không ảnh hưởng đến các phần tử khác rgb()
             ctx.shadowBlur = 0;
         }
 	}
