@@ -2,17 +2,21 @@
 	<div class="sm:container mx-auto">
 		<div class="flex items-center justify-between p-3 sm:py-6">
 			<div class="flex items-center justify-start gap-2">
-				<div class="rounded-full border boder-white py-1 px-3">
-					<span class="text-[1.3rem] uppercase">ho vinh tin</span>
+				<div
+					class="text-[0.9rem] lg:text-[1rem] xl:text-[1.5rem] rounded-full border boder-white py-1 px-3"
+				>
+					<span class="uppercase">ho vinh tin</span>
 				</div>
 
 				<div
 					class="hidden w-full md:block md:w-auto border boder-white rounded-full py-1 px-3"
 				>
-					<ul class="font-medium flex flex-col p-0 flex-row gap-5 mt-0">
+					<ul
+						class="text-[0.9rem] lg:text-[1rem] xl:text-[1.5rem] font-medium flex flex-col p-0 flex-row gap-5 mt-0"
+					>
 						@for (item of items; track $index) { @if(item.href) {
 						<li class="">
-							<a
+							<a 
 								target="_blank"
 								[href]="item.href"
 								class="block bg-blue-700 rounded-sm hover:text-green-600 bg-transparent"
@@ -38,7 +42,7 @@
 
 			<div class="hidden md:block">
 				<div
-					class="border border-white rounded-full flex items-center justify-between gap-2 w-[150px] text-center px-3"
+					class="border border-white rounded-full flex items-center justify-between gap-2 text-center px-3"
 				>
 					<app-svg
 						[name]="activatedItem.icon"
@@ -46,7 +50,9 @@
 						fill="white"
 						stroke="white"
 					></app-svg>
-					<span class="text-center select-none">{{ activatedItem.name }}</span>
+					<span class="lg:text-[1rem] xl:text-[1.5rem] text-center select-none">{{
+						activatedItem.name
+					}}</span>
 					<span></span>
 				</div>
 			</div>
@@ -54,13 +60,13 @@
 			<div class="block md:hidden">
 				<div
 					(click)="onShowSideBar()"
-					class="cursor-pointer border border-white rounded-full flex items-center justify-between gap-2 w-[150px] text-center px-3"
+					class="cursor-pointer border border-white rounded-full flex items-center justify-between gap-2 text-center px-3 hover:bg-white hover:text-black duration-200"
 				>
 					<app-svg
 						[name]="activatedItem.icon"
-						classes="w-6 h-6"
-						fill="white"
-						stroke="white"
+						classes="w-6 h-6 hover:bg-white hover:text-black"
+						fill="currentColor"
+						stroke="currentColor"
 					></app-svg>
 					<span class="text-center select-none">{{ activatedItem.name }}</span>
 					<span></span>

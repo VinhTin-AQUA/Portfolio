@@ -5,13 +5,13 @@
 			<div class="p-6 border border-gray-200 rounded-lg shadow-sm mb-3 ex-item">
 				<!-- project name -->
 				<div class="">
-					<h5 class="md:text-2xl font-bold tracking-tight text-white uppercase">
+					<h5 class="text-[1.4rem] md:text-2xl lg:text-3xl xl:text-4xl font-bold tracking-tight text-white uppercase">
 						{{ item.projectName }}
 					</h5>
 				</div>
 
 				<!-- position -->
-				<div class="md:text-[1.3rem] mb-3">
+				<div class="text-[1.3rem] lg:text-2xl xl:text-3xl mb-3">
 					<div>
 						<span class="text-green-600">{{ item.position }}</span>
 					</div>
@@ -20,7 +20,7 @@
 				<!-- tech stack -->
 				<div class="mb-3">
 					<div>
-						<span class="text-[1.1rem] md:text-[1.8rem]">Tech stack</span>
+						<span class="text-[1.8rem] md:text-[2rem]">Tech stack</span>
 					</div>
 
 					<div class="flex flex-wrap gap-3">
@@ -33,7 +33,7 @@
 				<!-- tools -->
 				<div class="mb-3">
 					<div>
-						<span class="text-[1.1rem] md:text-[1.8rem]">Tools</span>
+						<span class="text-[1.8rem] md:text-[2rem]">Tools</span>
 					</div>
 
 					<div class="flex flex-wrap gap-1">
@@ -46,10 +46,10 @@
 				<!-- Main Task -->
 				<div class="mb-3">
 					<div>
-						<span class="text-[1.1rem] md:text-[1.8rem]">Main Task</span>
+						<span class="text-[1.8rem] md:text-[2rem]">Main Task</span>
 					</div>
 
-					<div class="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-5">
+					<div class="text-[1.1rem] xl:text-[1.3rem] grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-5">
 						@for (task of item.mainTasks; track $index) {
 						<p>
 							{{ task }}
@@ -64,7 +64,7 @@
 						<span class="text-[1.1rem] md:text-[1.8rem]">Description</span>
 					</div>
 
-					<div class="">
+					<div class="text-[1.1rem] xl:text-[1.3rem] ">
 						<p>
 							{{ item.description }}
 						</p>

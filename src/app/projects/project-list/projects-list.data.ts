@@ -70,6 +70,7 @@ export const projects = [
 			'✅ Deploy a video processing and transcoding service to adaptive streaming format according to the MPEG-DASH standard, using FFmpeg',
 			'✅ Build an adaptive video distribution service via HTTP with MPEG-DASH',
 			'✅ Use Docker to containerize each microservice, deploy the entire system on Kubernetes, and establish effective communication between services via gRPC',
+			'✅ Monitor video upload status via SignalR',
 		],
 		position: 'Full-stack Developer',
 		url: '',
